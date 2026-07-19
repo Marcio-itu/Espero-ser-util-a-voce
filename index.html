@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão Digital Interativo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <img src="arte.jpg" alt="Business Card">
-        <a href="marcio.vcf" class="hotspot" style="top: 10%; left: 50%; width: 20%; height: 20%;"></a>
+        <!-- Substitua a imagem abaixo pela sua arte real mantendo o nome arte.jpg -->
+        <img src="arte.jpg" alt="Cartão de Visitas">
+        
+        <!-- Áreas de clique (Hotspots) -->
+        <a href="marcio.vcf" class="hotspot" id="btn-contato" title="Salvar Contato"></a>
+        <a href="https://www.linkedin.com" target="_blank" class="hotspot" id="btn-linkedin" title="LinkedIn"></a>
     </div>
     <script src="script.js"></script>
 </body>

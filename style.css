@@ -1,59 +1,11 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: sans-serif;
-}
-
-.container {
-    position: relative;
-    width: 100%;
-    max-width: 480px; /* Tamanho ideal para visualização mobile */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    background: #fff;
-    overflow: hidden;
-}
-
-.container img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Configuração dos Hotspots (Áreas de Clique) */
-.hotspot {
-    position: absolute;
-    display: block;
-    cursor: pointer;
-    /* Remova ou comente a linha abaixo (border) quando terminar de ajustar as posições */
-    border: 2px dashed #ff0000; 
-    background-color: rgba(255, 0, 0, 0.1); /* Suave preenchimento para visualização técnica */
-    transition: background-color 0.2s ease;
-}
-
-.hotspot:hover {
-    background-color: rgba(255, 0, 0, 0.25);
-}
-
-/* Posições ajustáveis (Altere as porcentagens conforme sua imagem) */
-#btn-contato {
-    top: 65%;
-    left: 8%;
-    width: 38%;
-    height: 12%;
-}
-
-#btn-linkedin {
-    top: 65%;
-    left: 54%;
-    width: 38%;
-    height: 12%;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background-color: #1a1a1a; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+.container { position: relative; width: 100%; max-width: 480px; }
+.container img { width: 100%; display: block; }
+.hotspot { position: absolute; display: block; cursor: pointer; border: none; background: transparent; z-index: 10; }
+#btn-whatsapp  { top: 62%; left: 8%;  width: 25%; height: 12%; }
+#btn-ligar     { top: 62%; left: 38%; width: 25%; height: 12%; }
+#btn-simulador { top: 62%; left: 68%; width: 25%; height: 12%; }
+#btn-instagram { top: 78%; left: 8%;  width: 25%; height: 12%; }
+#btn-email     { top: 78%; left: 38%; width: 25%; height: 12%; }
+#btn-salvar    { top: 78%; left: 68%; width: 25%; height: 12%; }

@@ -1,9 +1,2 @@
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:#1a1a1a;display:flex;justify-content:center;align-items:center;min-height:100vh}
-.card{position:relative;width:100%;max-width:520px}
-.art{display:block;width:100%;height:auto}
-.hotspots{position:absolute;top:68%;left:8%;right:8%;bottom:6%;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:5%}
-.hotspot{display:flex;align-items:center;justify-content:center;text-decoration:none}
-.hotspot span{width:60px;height:60px;border-radius:50%;transition:background 0.2s ease, transform 0.1s ease}
-.hotspot:hover span{background:rgba(255,255,255,0.1)}
-.hotspot:active span{transform:scale(0.85);background:rgba(255,255,255,0.2)}
+.container { position: relative; width: 100%; max-width: 600px; }
+.hotspot { position: absolute; display: block; }

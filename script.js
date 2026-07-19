@@ -1,7 +1,3 @@
-document.querySelectorAll(".hotspot").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    if (navigator.vibrate) {
-      navigator.vibrate(12);
-    }
-  });
+document.querySelectorAll(".hotspot").forEach((button)=>{
+button.addEventListener("click",()=>{if(navigator.vibrate)navigator.vibrate(12);});
 });

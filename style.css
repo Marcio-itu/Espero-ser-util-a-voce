@@ -127,63 +127,55 @@ body {
 }
 
 /* ============================================ */
-/* POSICIONAMENTO DOS BOTÕES - ATUALIZADO */
-/* Tamanho padrão: 101px (WhatsApp + 10%) */
+/* POSICIONAMENTO DOS BOTÕES - FINAL */
+/* Tamanho padrão: 101px */
 /* ============================================ */
 
-/* LINHA DE CIMA - todos com top: 18% */
-
-/* WHATSAPP - left: 18%, top: 18%, tamanho 101px */
+/* LINHA DE CIMA - top: 17% */
 .hotspot:nth-child(1) { 
     left: 18%;
-    top: 18%;
+    top: 17%;
     width: 101px;
     height: 101px;
     border-radius: 50.5px;
 }
 
-/* LIGAR - left: 46%, top: 18%, tamanho 101px */
 .hotspot:nth-child(2) { 
     left: 46%;
-    top: 18%;
+    top: 17%;
     width: 101px;
     height: 101px;
     border-radius: 50.5px;
 }
 
-/* SIMULADOR - left: 72%, top: 18%, tamanho 101px */
 .hotspot:nth-child(3) { 
     left: 72%;
-    top: 18%;
+    top: 17%;
     width: 101px;
     height: 101px;
     border-radius: 50.5px;
 }
 
-/* LINHA DE BAIXO - tamanho 101px também */
-
-/* INSTAGRAM */
+/* LINHA DE BAIXO - top: 58% */
 .hotspot:nth-child(4) { 
-    left: 10%;
-    top: 56%;
+    left: 18%;
+    top: 58%;
     width: 101px;
     height: 101px;
     border-radius: 50.5px;
 }
 
-/* E-MAIL */
 .hotspot:nth-child(5) { 
-    left: 40%;
-    top: 56%;
+    left: 46%;
+    top: 58%;
     width: 101px;
     height: 101px;
     border-radius: 50.5px;
 }
 
-/* SALVAR CONTATO */
 .hotspot:nth-child(6) { 
-    left: 70%;
-    top: 56%;
+    left: 72%;
+    top: 58%;
     width: 101px;
     height: 101px;
     border-radius: 50.5px;
@@ -203,39 +195,24 @@ body {
         border-radius: 30px;
     }
     
-    /* Tablet - todos os botões com mesmo tamanho */
+    /* Tablet - todos com mesmo tamanho */
     .hotspot:nth-child(1),
     .hotspot:nth-child(2),
     .hotspot:nth-child(3),
     .hotspot:nth-child(4),
     .hotspot:nth-child(5),
     .hotspot:nth-child(6) {
-        width: 76px;    /* 69px + 10% = 76px */
+        width: 76px;
         height: 76px;
         border-radius: 38px;
     }
     
-    /* WHATSAPP - Tablet */
-    .hotspot:nth-child(1) { 
-        left: 18%;
-        top: 16%;
-    }
-    
-    /* LIGAR - Tablet */
-    .hotspot:nth-child(2) { 
-        left: 46%;
-        top: 16%;
-    }
-    
-    /* SIMULADOR - Tablet */
-    .hotspot:nth-child(3) { 
-        left: 72%;
-        top: 16%;
-    }
-    
-    .hotspot:nth-child(4) { left: 10%; top: 58%; }
-    .hotspot:nth-child(5) { left: 40%; top: 58%; }
-    .hotspot:nth-child(6) { left: 70%; top: 58%; }
+    .hotspot:nth-child(1) { left: 18%; top: 15%; }
+    .hotspot:nth-child(2) { left: 46%; top: 15%; }
+    .hotspot:nth-child(3) { left: 72%; top: 15%; }
+    .hotspot:nth-child(4) { left: 18%; top: 58%; }
+    .hotspot:nth-child(5) { left: 46%; top: 58%; }
+    .hotspot:nth-child(6) { left: 72%; top: 58%; }
 }
 
 /* ============================================ */
@@ -248,35 +225,25 @@ body {
         border-radius: 22px;
     }
     
-    /* Mobile - todos os botões com mesmo tamanho */
+    /* Mobile - todos com mesmo tamanho */
     .hotspot:nth-child(1),
     .hotspot:nth-child(2),
     .hotspot:nth-child(3),
     .hotspot:nth-child(4),
     .hotspot:nth-child(5),
     .hotspot:nth-child(6) {
-        width: 57px;    /* 52px + 10% = 57px */
+        width: 57px;
         height: 57px;
         border-radius: 28.5px;
     }
     
-    /* WHATSAPP - Mobile */
-    .hotspot:nth-child(1) { 
-        left: 18%;
-        top: 14%;
-    }
-    
-    /* LIGAR - Mobile */
-    .hotspot:nth-child(2) { 
-        left: 46%;
-        top: 14%;
-    }
-    
-    /* SIMULADOR - Mobile */
-    .hotspot:nth-child(3) { 
-        left: 72%;
-        top: 14%;
-    }
+    .hotspot:nth-child(1) { left: 18%; top: 13%; }
+    .hotspot:nth-child(2) { left: 46%; top: 13%; }
+    .hotspot:nth-child(3) { left: 72%; top: 13%; }
+    .hotspot:nth-child(4) { left: 18%; top: 60%; }
+    .hotspot:nth-child(5) { left: 46%; top: 60%; }
+    .hotspot:nth-child(6) { left: 72%; top: 60%; }
+}
     
     .hotspot:nth-child(4) { left: 8%; top: 60%; }
     .hotspot:nth-child(5) { left: 40%; top: 60%; }

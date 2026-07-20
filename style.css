@@ -126,10 +126,14 @@ body {
     }
 }
 
-/* POSICIONAMENTO DOS BOTÕES - WhatsApp ajustado */
+/* POSICIONAMENTO DOS BOTÕES */
+/* WHATSAPP - Ajustado: left 20%, tamanho 92px */
 .hotspot:nth-child(1) { 
-    left: -2%;  /* 10% - 12% = -2% */ 
-    top: 16%;   /* 12% + 4% = 16% */
+    left: 20%;
+    top: 16%;
+    width: 92px;    /* 80px + 15% = 92px */
+    height: 92px;   /* 80px + 15% = 92px */
+    border-radius: 46px; /* 92px / 2 = 46px */
 }
 .hotspot:nth-child(2) { left: 40%; top: 12%; }
 .hotspot:nth-child(3) { left: 70%; top: 12%; }
@@ -148,7 +152,14 @@ body {
         border-radius: 30px;
     }
     
-    .hotspot:nth-child(1) { left: -2%; top: 14%; }
+    /* WHATSAPP - Tablet */
+    .hotspot:nth-child(1) { 
+        left: 20%; 
+        top: 14%;
+        width: 69px;    /* 60px + 15% = 69px */
+        height: 69px;
+        border-radius: 34.5px;
+    }
     .hotspot:nth-child(2) { left: 40%; top: 10%; }
     .hotspot:nth-child(3) { left: 70%; top: 10%; }
     .hotspot:nth-child(4) { left: 10%; top: 58%; }
@@ -163,7 +174,14 @@ body {
         border-radius: 22px;
     }
     
-    .hotspot:nth-child(1) { left: -4%; top: 12%; }
+    /* WHATSAPP - Mobile */
+    .hotspot:nth-child(1) { 
+        left: 20%; 
+        top: 12%;
+        width: 52px;    /* 45px + 15% = 52px */
+        height: 52px;
+        border-radius: 26px;
+    }
     .hotspot:nth-child(2) { left: 40%; top: 8%; }
     .hotspot:nth-child(3) { left: 72%; top: 8%; }
     .hotspot:nth-child(4) { left: 8%; top: 60%; }

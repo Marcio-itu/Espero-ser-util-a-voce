@@ -130,18 +130,18 @@ body {
 /* POSICIONAMENTO DOS BOTÕES - ATUALIZADO */
 /* ============================================ */
 
-/* WHATSAPP - left: 18%, tamanho 92px */
+/* WHATSAPP - left: 17%, tamanho 92px */
 .hotspot:nth-child(1) { 
-    left: 18%;
+    left: 17%;
     top: 16%;
     width: 92px;
     height: 92px;
     border-radius: 46px;
 }
 
-/* LIGAR - top: 16%, left: 10% */
+/* LIGAR - left: 47%, top: 16% */
 .hotspot:nth-child(2) { 
-    left: 10%;
+    left: 47%;
     top: 16%;
 }
 
@@ -185,7 +185,7 @@ body {
     
     /* WHATSAPP - Tablet */
     .hotspot:nth-child(1) { 
-        left: 18%;
+        left: 17%;
         top: 14%;
         width: 69px;
         height: 69px;
@@ -194,7 +194,7 @@ body {
     
     /* LIGAR - Tablet */
     .hotspot:nth-child(2) { 
-        left: 10%;
+        left: 47%;
         top: 14%;
     }
     
@@ -216,7 +216,7 @@ body {
     
     /* WHATSAPP - Mobile */
     .hotspot:nth-child(1) { 
-        left: 18%;
+        left: 17%;
         top: 12%;
         width: 52px;
         height: 52px;
@@ -225,7 +225,7 @@ body {
     
     /* LIGAR - Mobile */
     .hotspot:nth-child(2) { 
-        left: 10%;
+        left: 47%;
         top: 12%;
     }
     

@@ -126,25 +126,56 @@ body {
     }
 }
 
-/* POSICIONAMENTO DOS BOTÕES */
-/* WHATSAPP - Ajustado: left 20%, tamanho 92px */
+/* ============================================ */
+/* POSICIONAMENTO DOS BOTÕES - ATUALIZADO */
+/* ============================================ */
+
+/* WHATSAPP - left: 18%, tamanho 92px */
 .hotspot:nth-child(1) { 
-    left: 20%;
+    left: 18%;
     top: 16%;
-    width: 92px;    /* 80px + 15% = 92px */
-    height: 92px;   /* 80px + 15% = 92px */
-    border-radius: 46px; /* 92px / 2 = 46px */
+    width: 92px;
+    height: 92px;
+    border-radius: 46px;
 }
-.hotspot:nth-child(2) { left: 40%; top: 12%; }
-.hotspot:nth-child(3) { left: 70%; top: 12%; }
-.hotspot:nth-child(4) { left: 10%; top: 56%; }
-.hotspot:nth-child(5) { left: 40%; top: 56%; }
-.hotspot:nth-child(6) { left: 70%; top: 56%; }
+
+/* LIGAR - top: 16%, left: 10% */
+.hotspot:nth-child(2) { 
+    left: 10%;
+    top: 16%;
+}
+
+/* SIMULADOR */
+.hotspot:nth-child(3) { 
+    left: 70%;
+    top: 12%;
+}
+
+/* INSTAGRAM */
+.hotspot:nth-child(4) { 
+    left: 10%;
+    top: 56%;
+}
+
+/* E-MAIL */
+.hotspot:nth-child(5) { 
+    left: 40%;
+    top: 56%;
+}
+
+/* SALVAR CONTATO */
+.hotspot:nth-child(6) { 
+    left: 70%;
+    top: 56%;
+}
 
 .hotspot span {
     display: none;
 }
 
+/* ============================================ */
+/* TABLET - 768px */
+/* ============================================ */
 @media (max-width: 768px) {
     .hotspot {
         width: 60px;
@@ -154,19 +185,28 @@ body {
     
     /* WHATSAPP - Tablet */
     .hotspot:nth-child(1) { 
-        left: 20%; 
+        left: 18%;
         top: 14%;
-        width: 69px;    /* 60px + 15% = 69px */
+        width: 69px;
         height: 69px;
         border-radius: 34.5px;
     }
-    .hotspot:nth-child(2) { left: 40%; top: 10%; }
+    
+    /* LIGAR - Tablet */
+    .hotspot:nth-child(2) { 
+        left: 10%;
+        top: 14%;
+    }
+    
     .hotspot:nth-child(3) { left: 70%; top: 10%; }
     .hotspot:nth-child(4) { left: 10%; top: 58%; }
     .hotspot:nth-child(5) { left: 40%; top: 58%; }
     .hotspot:nth-child(6) { left: 70%; top: 58%; }
 }
 
+/* ============================================ */
+/* MOBILE - 480px */
+/* ============================================ */
 @media (max-width: 480px) {
     .hotspot {
         width: 45px;
@@ -176,13 +216,19 @@ body {
     
     /* WHATSAPP - Mobile */
     .hotspot:nth-child(1) { 
-        left: 20%; 
+        left: 18%;
         top: 12%;
-        width: 52px;    /* 45px + 15% = 52px */
+        width: 52px;
         height: 52px;
         border-radius: 26px;
     }
-    .hotspot:nth-child(2) { left: 40%; top: 8%; }
+    
+    /* LIGAR - Mobile */
+    .hotspot:nth-child(2) { 
+        left: 10%;
+        top: 12%;
+    }
+    
     .hotspot:nth-child(3) { left: 72%; top: 8%; }
     .hotspot:nth-child(4) { left: 8%; top: 60%; }
     .hotspot:nth-child(5) { left: 40%; top: 60%; }

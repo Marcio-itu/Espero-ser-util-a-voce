@@ -45,12 +45,6 @@ function createRipple(event, element) {
     }, 600);
 }
 
-document.querySelectorAll(".hotspot").forEach((button) => {
-    button.addEventListener("touchstart", function(e) {
-        // Haptic feedback já implementado no click
-    }, { passive: true });
-});
-
 document.addEventListener("dblclick", function(e) {
     e.preventDefault();
 }, { passive: false });

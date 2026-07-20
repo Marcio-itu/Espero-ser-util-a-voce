@@ -40,9 +40,9 @@ body {
 
 .hotspot {
     position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 40px;
+    width: 101px;
+    height: 101px;
+    border-radius: 50.5px;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
     transition: all 0.15s ease;
@@ -56,11 +56,6 @@ body {
     touch-action: manipulation;
     user-select: none;
     -webkit-user-select: none;
-    
-    /* ========== CÓDIGO DE DEBUG ========== */
-    background: rgba(255, 0, 0, 0.3) !important;
-    border: 2px solid red !important;
-    /* ==================================== */
 }
 
 .hotspot:hover {
@@ -128,58 +123,17 @@ body {
 
 /* ============================================ */
 /* POSICIONAMENTO DOS BOTÕES - FINAL */
-/* Tamanho padrão: 101px */
 /* ============================================ */
 
 /* LINHA DE CIMA - top: 17% */
-.hotspot:nth-child(1) { 
-    left: 18%;
-    top: 17%;
-    width: 101px;
-    height: 101px;
-    border-radius: 50.5px;
-}
-
-.hotspot:nth-child(2) { 
-    left: 46%;
-    top: 17%;
-    width: 101px;
-    height: 101px;
-    border-radius: 50.5px;
-}
-
-.hotspot:nth-child(3) { 
-    left: 72%;
-    top: 17%;
-    width: 101px;
-    height: 101px;
-    border-radius: 50.5px;
-}
+.hotspot:nth-child(1) { left: 18%; top: 17%; }
+.hotspot:nth-child(2) { left: 46%; top: 17%; }
+.hotspot:nth-child(3) { left: 72%; top: 17%; }
 
 /* LINHA DE BAIXO - top: 58% */
-.hotspot:nth-child(4) { 
-    left: 18%;
-    top: 58%;
-    width: 101px;
-    height: 101px;
-    border-radius: 50.5px;
-}
-
-.hotspot:nth-child(5) { 
-    left: 46%;
-    top: 58%;
-    width: 101px;
-    height: 101px;
-    border-radius: 50.5px;
-}
-
-.hotspot:nth-child(6) { 
-    left: 72%;
-    top: 58%;
-    width: 101px;
-    height: 101px;
-    border-radius: 50.5px;
-}
+.hotspot:nth-child(4) { left: 18%; top: 58%; }
+.hotspot:nth-child(5) { left: 46%; top: 58%; }
+.hotspot:nth-child(6) { left: 72%; top: 58%; }
 
 .hotspot span {
     display: none;
@@ -190,18 +144,6 @@ body {
 /* ============================================ */
 @media (max-width: 768px) {
     .hotspot {
-        width: 60px;
-        height: 60px;
-        border-radius: 30px;
-    }
-    
-    /* Tablet - todos com mesmo tamanho */
-    .hotspot:nth-child(1),
-    .hotspot:nth-child(2),
-    .hotspot:nth-child(3),
-    .hotspot:nth-child(4),
-    .hotspot:nth-child(5),
-    .hotspot:nth-child(6) {
         width: 76px;
         height: 76px;
         border-radius: 38px;
@@ -220,18 +162,6 @@ body {
 /* ============================================ */
 @media (max-width: 480px) {
     .hotspot {
-        width: 45px;
-        height: 45px;
-        border-radius: 22px;
-    }
-    
-    /* Mobile - todos com mesmo tamanho */
-    .hotspot:nth-child(1),
-    .hotspot:nth-child(2),
-    .hotspot:nth-child(3),
-    .hotspot:nth-child(4),
-    .hotspot:nth-child(5),
-    .hotspot:nth-child(6) {
         width: 57px;
         height: 57px;
         border-radius: 28.5px;
@@ -242,10 +172,5 @@ body {
     .hotspot:nth-child(3) { left: 72%; top: 13%; }
     .hotspot:nth-child(4) { left: 18%; top: 60%; }
     .hotspot:nth-child(5) { left: 46%; top: 60%; }
-    .hotspot:nth-child(6) { left: 72%; top: 60%; }
-}
-    
-    .hotspot:nth-child(4) { left: 8%; top: 60%; }
-    .hotspot:nth-child(5) { left: 40%; top: 60%; }
     .hotspot:nth-child(6) { left: 72%; top: 60%; }
 }

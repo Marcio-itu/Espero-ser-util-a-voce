@@ -34,7 +34,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 45%; /* Aumentei para cobrir melhor a área dos botões */
+    height: 45%;
     z-index: 5;
 }
 
@@ -88,42 +88,42 @@ body {
     }
 }
 
-/* Ajuste fino das posições - baseado na sua imagem */
+/* Botões ajustados - subindo 15% */
 .hotspot:nth-child(1) { 
     left: 10%; 
-    top: 12%; /* WHATSAPP - linha 1, coluna 1 */
+    top: -3%; /* 12% - 15% = -3% */
 }
 
 .hotspot:nth-child(2) { 
     left: 38%; 
-    top: 12%; /* LIGAR - linha 1, coluna 2 */
+    top: -3%; /* 12% - 15% = -3% */
 }
 
 .hotspot:nth-child(3) { 
     left: 66%; 
-    top: 12%; /* SIMULADOR - linha 1, coluna 3 */
+    top: -3%; /* 12% - 15% = -3% */
 }
 
 .hotspot:nth-child(4) { 
     left: 10%; 
-    top: 58%; /* INSTAGRAM - linha 2, coluna 1 */
+    top: 43%; /* 58% - 15% = 43% */
 }
 
 .hotspot:nth-child(5) { 
     left: 38%; 
-    top: 58%; /* E-MAIL - linha 2, coluna 2 */
+    top: 43%; /* 58% - 15% = 43% */
 }
 
 .hotspot:nth-child(6) { 
     left: 66%; 
-    top: 58%; /* SALVAR CONTATO - linha 2, coluna 3 */
+    top: 43%; /* 58% - 15% = 43% */
 }
 
 .hotspot span {
     display: none;
 }
 
-/* Responsivo */
+/* Responsivo - também ajustado -15% */
 @media (max-width: 768px) {
     .hotspot {
         width: 80px;
@@ -131,12 +131,12 @@ body {
         border-radius: 40px;
     }
     
-    .hotspot:nth-child(1) { left: 8%; top: 10%; }
-    .hotspot:nth-child(2) { left: 38%; top: 10%; }
-    .hotspot:nth-child(3) { left: 68%; top: 10%; }
-    .hotspot:nth-child(4) { left: 8%; top: 60%; }
-    .hotspot:nth-child(5) { left: 38%; top: 60%; }
-    .hotspot:nth-child(6) { left: 68%; top: 60%; }
+    .hotspot:nth-child(1) { left: 8%; top: -5%; }  /* 10% - 15% = -5% */
+    .hotspot:nth-child(2) { left: 38%; top: -5%; }
+    .hotspot:nth-child(3) { left: 68%; top: -5%; }
+    .hotspot:nth-child(4) { left: 8%; top: 45%; }  /* 60% - 15% = 45% */
+    .hotspot:nth-child(5) { left: 38%; top: 45%; }
+    .hotspot:nth-child(6) { left: 68%; top: 45%; }
 }
 
 @media (max-width: 480px) {
@@ -146,10 +146,10 @@ body {
         border-radius: 28px;
     }
     
-    .hotspot:nth-child(1) { left: 5%; top: 8%; }
-    .hotspot:nth-child(2) { left: 37%; top: 8%; }
-    .hotspot:nth-child(3) { left: 69%; top: 8%; }
-    .hotspot:nth-child(4) { left: 5%; top: 62%; }
-    .hotspot:nth-child(5) { left: 37%; top: 62%; }
-    .hotspot:nth-child(6) { left: 69%; top: 62%; }
+    .hotspot:nth-child(1) { left: 5%; top: -7%; }  /* 8% - 15% = -7% */
+    .hotspot:nth-child(2) { left: 37%; top: -7%; }
+    .hotspot:nth-child(3) { left: 69%; top: -7%; }
+    .hotspot:nth-child(4) { left: 5%; top: 47%; }  /* 62% - 15% = 47% */
+    .hotspot:nth-child(5) { left: 37%; top: 47%; }
+    .hotspot:nth-child(6) { left: 69%; top: 47%; }
 }

@@ -130,25 +130,25 @@ body {
 /* POSICIONAMENTO DOS BOTÕES - ATUALIZADO */
 /* ============================================ */
 
-/* WHATSAPP - left: 17%, tamanho 92px */
+/* WHATSAPP - left: 18%, top: 16%, tamanho 92px */
 .hotspot:nth-child(1) { 
-    left: 17%;
+    left: 18%;
     top: 16%;
     width: 92px;
     height: 92px;
     border-radius: 46px;
 }
 
-/* LIGAR - left: 47%, top: 16% */
+/* LIGAR - left: 46%, top: 16% */
 .hotspot:nth-child(2) { 
-    left: 47%;
+    left: 46%;
     top: 16%;
 }
 
-/* SIMULADOR */
+/* SIMULADOR - left: 64%, top: 16% */
 .hotspot:nth-child(3) { 
-    left: 70%;
-    top: 12%;
+    left: 64%;
+    top: 16%;
 }
 
 /* INSTAGRAM */
@@ -185,7 +185,7 @@ body {
     
     /* WHATSAPP - Tablet */
     .hotspot:nth-child(1) { 
-        left: 17%;
+        left: 18%;
         top: 14%;
         width: 69px;
         height: 69px;
@@ -194,11 +194,16 @@ body {
     
     /* LIGAR - Tablet */
     .hotspot:nth-child(2) { 
-        left: 47%;
+        left: 46%;
         top: 14%;
     }
     
-    .hotspot:nth-child(3) { left: 70%; top: 10%; }
+    /* SIMULADOR - Tablet */
+    .hotspot:nth-child(3) { 
+        left: 64%;
+        top: 14%;
+    }
+    
     .hotspot:nth-child(4) { left: 10%; top: 58%; }
     .hotspot:nth-child(5) { left: 40%; top: 58%; }
     .hotspot:nth-child(6) { left: 70%; top: 58%; }
@@ -216,7 +221,7 @@ body {
     
     /* WHATSAPP - Mobile */
     .hotspot:nth-child(1) { 
-        left: 17%;
+        left: 18%;
         top: 12%;
         width: 52px;
         height: 52px;
@@ -225,11 +230,20 @@ body {
     
     /* LIGAR - Mobile */
     .hotspot:nth-child(2) { 
-        left: 47%;
+        left: 46%;
         top: 12%;
     }
     
-    .hotspot:nth-child(3) { left: 72%; top: 8%; }
+    /* SIMULADOR - Mobile */
+    .hotspot:nth-child(3) { 
+        left: 64%;
+        top: 12%;
+    }
+    
+    .hotspot:nth-child(4) { left: 8%; top: 60%; }
+    .hotspot:nth-child(5) { left: 40%; top: 60%; }
+    .hotspot:nth-child(6) { left: 72%; top: 60%; }
+}
     .hotspot:nth-child(4) { left: 8%; top: 60%; }
     .hotspot:nth-child(5) { left: 40%; top: 60%; }
     .hotspot:nth-child(6) { left: 72%; top: 60%; }

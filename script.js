@@ -1,9 +1,5 @@
 document.querySelectorAll(".hotspot").forEach((button) => {
     button.addEventListener("click", function(e) {
-        // Impede completamente o comportamento padrão
-        e.preventDefault();
-        e.stopPropagation();
-        
         // Feedback tátil (vibração)
         if (navigator.vibrate) {
             navigator.vibrate(15);
@@ -18,40 +14,8 @@ document.querySelectorAll(".hotspot").forEach((button) => {
             this.classList.remove("active");
         }, 200);
         
-        // Salva o href e target
-        const href = this.getAttribute('href');
-        const target = this.getAttribute('target');
-        
-        // Abre o link após o efeito visual
-        setTimeout(() => {
-            // Para links de telefone
-            if (href.startsWith('tel:')) {
-                window.location.href = href;
-            }
-            // Para links de email
-            else if (href.startsWith('mailto:')) {
-                window.location.href = href;
-            }
-            // Para downloads
-            else if (this.hasAttribute('download')) {
-                window.location.href = href;
-            }
-            // Para outros links (WhatsApp, Instagram, Simulador)
-            else {
-                // Abre em nova aba com parâmetros para manter posição
-                const newWindow = window.open(href, '_blank');
-                if (newWindow) {
-                    // Tenta manter a posição
-                    newWindow.addEventListener('load', function() {
-                        // Pequeno delay para garantir que a página carregou
-                        setTimeout(() => {
-                            // Centraliza no topo
-                            newWindow.scrollTo(0, 0);
-                        }, 100);
-                    });
-                }
-            }
-        }, 150);
+        // NÃO FAZEMOS preventDefault() aqui para não bloquear os links
+        // Deixamos o navegador lidar com o link normalmente
     });
     
     button.addEventListener("mouseleave", function() {
@@ -87,24 +51,14 @@ function createRipple(event, element) {
     }, 600);
 }
 
-// Bloqueia qualquer clique que possa causar rolagem
-document.addEventListener('click', function(e) {
-    if (e.target.closest('.hotspot')) {
-        e.preventDefault();
+// Pequeno ajuste para manter a página no topo em dispositivos móveis
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth <= 768) {
+        window.scrollTo(0, 0);
     }
-}, { passive: false, capture: true });
-
-// Força a página a ficar no topo em dispositivos móveis
-window.addEventListener('load', function() {
-    window.scrollTo(0, 0);
 });
 
-// Previne rolagem ao tocar nos botões
-document.addEventListener('touchstart', function(e) {
-    if (e.target.closest('.hotspot')) {
-        // Impede que o toque cause rolagem
-        e.preventDefault();
-        // Mas permite o clique
-        e.target.click();
-    }
-}, { passive: false, capture: true });
+// Previne zoom duplo
+document.addEventListener('dblclick', function(e) {
+    e.preventDefault();
+}, { passive: false });

@@ -1,7 +1,8 @@
 document.querySelectorAll(".hotspot").forEach((button) => {
     button.addEventListener("click", function(e) {
-        // Impede o comportamento padrão do link
+        // Impede completamente o comportamento padrão
         e.preventDefault();
+        e.stopPropagation();
         
         // Feedback tátil (vibração)
         if (navigator.vibrate) {
@@ -17,28 +18,37 @@ document.querySelectorAll(".hotspot").forEach((button) => {
             this.classList.remove("active");
         }, 200);
         
-        // Pega o link do botão
+        // Salva o href e target
         const href = this.getAttribute('href');
         const target = this.getAttribute('target');
-        const rel = this.getAttribute('rel');
         
-        // Abre o link após o efeito visual (pequeno delay)
+        // Abre o link após o efeito visual
         setTimeout(() => {
-            if (this.getAttribute('href').startsWith('tel:')) {
-                // Links de telefone - abrem normalmente
+            // Para links de telefone
+            if (href.startsWith('tel:')) {
                 window.location.href = href;
-            } else if (this.getAttribute('href').startsWith('mailto:')) {
-                // Links de email - abrem normalmente
+            }
+            // Para links de email
+            else if (href.startsWith('mailto:')) {
                 window.location.href = href;
-            } else if (this.getAttribute('download')) {
-                // Downloads - abrem normalmente
+            }
+            // Para downloads
+            else if (this.hasAttribute('download')) {
                 window.location.href = href;
-            } else {
-                // Para outros links (WhatsApp, Instagram, Simulador)
-                if (target === '_blank') {
-                    window.open(href, '_blank', 'noopener,noreferrer');
-                } else {
-                    window.location.href = href;
+            }
+            // Para outros links (WhatsApp, Instagram, Simulador)
+            else {
+                // Abre em nova aba com parâmetros para manter posição
+                const newWindow = window.open(href, '_blank');
+                if (newWindow) {
+                    // Tenta manter a posição
+                    newWindow.addEventListener('load', function() {
+                        // Pequeno delay para garantir que a página carregou
+                        setTimeout(() => {
+                            // Centraliza no topo
+                            newWindow.scrollTo(0, 0);
+                        }, 100);
+                    });
                 }
             }
         }, 150);
@@ -77,30 +87,24 @@ function createRipple(event, element) {
     }, 600);
 }
 
-// Impede rolagem ao clicar em links
+// Bloqueia qualquer clique que possa causar rolagem
 document.addEventListener('click', function(e) {
-    // Se o clique for em um link que está dentro de .hotspot
-    const hotspot = e.target.closest('.hotspot');
-    if (hotspot) {
-        // Previne qualquer comportamento de rolagem
+    if (e.target.closest('.hotspot')) {
         e.preventDefault();
     }
-}, { passive: false });
+}, { passive: false, capture: true });
 
-// Scroll suave para manter posição
-let lastScrollY = 0;
-document.addEventListener('touchstart', function() {
-    lastScrollY = window.scrollY;
-}, { passive: true });
+// Força a página a ficar no topo em dispositivos móveis
+window.addEventListener('load', function() {
+    window.scrollTo(0, 0);
+});
 
-document.addEventListener('touchend', function() {
-    // Se a página rolou após um clique, volta para a posição anterior
-    setTimeout(() => {
-        if (Math.abs(window.scrollY - lastScrollY) > 50) {
-            window.scrollTo({
-                top: lastScrollY,
-                behavior: 'smooth'
-            });
-        }
-    }, 300);
-}, { passive: true });
+// Previne rolagem ao tocar nos botões
+document.addEventListener('touchstart', function(e) {
+    if (e.target.closest('.hotspot')) {
+        // Impede que o toque cause rolagem
+        e.preventDefault();
+        // Mas permite o clique
+        e.target.click();
+    }
+}, { passive: false, capture: true });

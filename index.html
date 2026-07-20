@@ -12,13 +12,34 @@
 <meta property="og:image" content="preview.jpg">
 <link rel="stylesheet" href="style.css">
 <style>
-    /* Pequeno ajuste para evitar rolagem indesejada */
+    /* Força a página a ficar no topo */
     html, body {
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
+        height: 100%;
+        min-height: 100vh;
     }
+    
     .card {
         touch-action: manipulation;
+        position: relative;
+        max-width: 1024px;
+        width: 100%;
+        margin: 20px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        border-radius: 16px;
+        overflow: hidden;
+    }
+    
+    /* Centraliza o card na tela */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 10px;
+        background: #eee;
     }
 </style>
 </head>
@@ -35,9 +56,26 @@
 <a class="hotspot" href="marcio.vcf" download="Marcio-Santos.vcf" aria-label="Salvar contato" title="Salvar contato"><span>Contato</span></a>
 </nav>
 </main>
-<script src="script.js"></script>
-</body>
-</html>
+
+<!-- Script inline para garantir execução imediata -->
+<script>
+// Força a página a ficar no topo imediatamente
+window.scrollTo(0, 0);
+
+// E também após carregar
+window.addEventListener('load', function() {
+    window.scrollTo(0, 0);
+});
+
+// Previne rolagem em toques
+document.addEventListener('touchstart', function(e) {
+    if (e.target.closest('.hotspot')) {
+        // Impede rolagem
+        e.preventDefault();
+    }
+}, { passive: false });
+</script>
+
 <script src="script.js"></script>
 </body>
 </html>

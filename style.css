@@ -88,42 +88,43 @@ body {
     }
 }
 
-/* Botões ajustados - subindo 15% */
+/* LINHA DE CIMA (botões 1, 2, 3) - ajustados: descer 7% e mover 3% direita */
 .hotspot:nth-child(1) { 
-    left: 10%; 
-    top: -3%; /* 12% - 15% = -3% */
+    left: 13%; /* 10% + 3% = 13% */
+    top: 4%; /* -3% + 7% = 4% */
 }
 
 .hotspot:nth-child(2) { 
-    left: 38%; 
-    top: -3%; /* 12% - 15% = -3% */
+    left: 41%; /* 38% + 3% = 41% */
+    top: 4%; /* -3% + 7% = 4% */
 }
 
 .hotspot:nth-child(3) { 
-    left: 66%; 
-    top: -3%; /* 12% - 15% = -3% */
+    left: 69%; /* 66% + 3% = 69% */
+    top: 4%; /* -3% + 7% = 4% */
 }
 
+/* LINHA DE BAIXO (botões 4, 5, 6) - permanecem como estavam */
 .hotspot:nth-child(4) { 
     left: 10%; 
-    top: 43%; /* 58% - 15% = 43% */
+    top: 43%;
 }
 
 .hotspot:nth-child(5) { 
     left: 38%; 
-    top: 43%; /* 58% - 15% = 43% */
+    top: 43%;
 }
 
 .hotspot:nth-child(6) { 
     left: 66%; 
-    top: 43%; /* 58% - 15% = 43% */
+    top: 43%;
 }
 
 .hotspot span {
     display: none;
 }
 
-/* Responsivo - também ajustado -15% */
+/* Responsivo - apenas linha de cima ajustada */
 @media (max-width: 768px) {
     .hotspot {
         width: 80px;
@@ -131,10 +132,13 @@ body {
         border-radius: 40px;
     }
     
-    .hotspot:nth-child(1) { left: 8%; top: -5%; }  /* 10% - 15% = -5% */
-    .hotspot:nth-child(2) { left: 38%; top: -5%; }
-    .hotspot:nth-child(3) { left: 68%; top: -5%; }
-    .hotspot:nth-child(4) { left: 8%; top: 45%; }  /* 60% - 15% = 45% */
+    /* Linha de cima - tablet */
+    .hotspot:nth-child(1) { left: 11%; top: 2%; }  /* 8%+3% = 11%, -5%+7% = 2% */
+    .hotspot:nth-child(2) { left: 41%; top: 2%; }  /* 38%+3% = 41% */
+    .hotspot:nth-child(3) { left: 71%; top: 2%; }  /* 68%+3% = 71% */
+    
+    /* Linha de baixo - tablet */
+    .hotspot:nth-child(4) { left: 8%; top: 45%; }
     .hotspot:nth-child(5) { left: 38%; top: 45%; }
     .hotspot:nth-child(6) { left: 68%; top: 45%; }
 }
@@ -146,10 +150,13 @@ body {
         border-radius: 28px;
     }
     
-    .hotspot:nth-child(1) { left: 5%; top: -7%; }  /* 8% - 15% = -7% */
-    .hotspot:nth-child(2) { left: 37%; top: -7%; }
-    .hotspot:nth-child(3) { left: 69%; top: -7%; }
-    .hotspot:nth-child(4) { left: 5%; top: 47%; }  /* 62% - 15% = 47% */
+    /* Linha de cima - mobile */
+    .hotspot:nth-child(1) { left: 8%; top: 0%; }   /* 5%+3% = 8%, -7%+7% = 0% */
+    .hotspot:nth-child(2) { left: 40%; top: 0%; }  /* 37%+3% = 40% */
+    .hotspot:nth-child(3) { left: 72%; top: 0%; }  /* 69%+3% = 72% */
+    
+    /* Linha de baixo - mobile */
+    .hotspot:nth-child(4) { left: 5%; top: 47%; }
     .hotspot:nth-child(5) { left: 37%; top: 47%; }
     .hotspot:nth-child(6) { left: 69%; top: 47%; }
 }

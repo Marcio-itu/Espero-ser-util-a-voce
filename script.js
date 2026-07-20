@@ -48,7 +48,3 @@ function createRipple(event, element) {
 document.addEventListener("dblclick", function(e) {
     e.preventDefault();
 }, { passive: false });
-
-document.addEventListener("dblclick", function(e) {
-    e.preventDefault();
-}, { passive: false });

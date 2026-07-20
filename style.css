@@ -145,9 +145,9 @@ body {
     top: 16%;
 }
 
-/* SIMULADOR - left: 64%, top: 16% */
+/* SIMULADOR - left: 72%, top: 16% */
 .hotspot:nth-child(3) { 
-    left: 64%;
+    left: 72%;
     top: 16%;
 }
 
@@ -200,7 +200,7 @@ body {
     
     /* SIMULADOR - Tablet */
     .hotspot:nth-child(3) { 
-        left: 64%;
+        left: 72%;
         top: 14%;
     }
     
@@ -236,14 +236,10 @@ body {
     
     /* SIMULADOR - Mobile */
     .hotspot:nth-child(3) { 
-        left: 64%;
+        left: 72%;
         top: 12%;
     }
     
-    .hotspot:nth-child(4) { left: 8%; top: 60%; }
-    .hotspot:nth-child(5) { left: 40%; top: 60%; }
-    .hotspot:nth-child(6) { left: 72%; top: 60%; }
-}
     .hotspot:nth-child(4) { left: 8%; top: 60%; }
     .hotspot:nth-child(5) { left: 40%; top: 60%; }
     .hotspot:nth-child(6) { left: 72%; top: 60%; }

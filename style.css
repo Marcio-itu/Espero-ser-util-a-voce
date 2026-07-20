@@ -1,8 +1,124 @@
-.hotspot:nth-child(1) { 
-    left: 39%; /* Aumente para mover para direita */
-    top: 11%;
+* {
+    box-sizing: border-box;
 }
-    .hotspot:nth-child(4) { left: 5%; top: 47%; }
-    .hotspot:nth-child(5) { left: 37%; top: 47%; }
-    .hotspot:nth-child(6) { left: 69%; top: 47%; }
+
+html, body {
+    margin: 0;
+    background: #eee;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    max-width: 1024px;
+    width: 100%;
+    margin: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.art {
+    width: 100%;
+    display: block;
+}
+
+.hotspots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 42%;
+    z-index: 5;
+}
+
+.hotspot {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.hotspot:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+.hotspot:active,
+.hotspot.active {
+    transform: scale(0.85) !important;
+    background: rgba(212, 175, 55, 0.25) !important;
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.6), inset 0 0 20px rgba(212, 175, 55, 0.2) !important;
+    transition: all 0.08s ease !important;
+}
+
+.hotspot .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.4);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Posicionamento dos botões - VERSÃO ORIGINAL */
+.hotspot:nth-child(1) { left: 12%; top: 18%; }
+.hotspot:nth-child(2) { left: 40%; top: 18%; }
+.hotspot:nth-child(3) { left: 68%; top: 18%; }
+.hotspot:nth-child(4) { left: 12%; top: 58%; }
+.hotspot:nth-child(5) { left: 40%; top: 58%; }
+.hotspot:nth-child(6) { left: 68%; top: 58%; }
+
+.hotspot span {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hotspot {
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+    }
+    
+    .hotspot:nth-child(1) { left: 12%; top: 15%; }
+    .hotspot:nth-child(2) { left: 40%; top: 15%; }
+    .hotspot:nth-child(3) { left: 68%; top: 15%; }
+    .hotspot:nth-child(4) { left: 12%; top: 60%; }
+    .hotspot:nth-child(5) { left: 40%; top: 60%; }
+    .hotspot:nth-child(6) { left: 68%; top: 60%; }
+}
+
+@media (max-width: 480px) {
+    .hotspot {
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+    }
 }

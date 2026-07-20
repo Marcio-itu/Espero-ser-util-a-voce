@@ -126,8 +126,11 @@ body {
     }
 }
 
-/* POSICIONAMENTO DOS BOTÕES */
-.hotspot:nth-child(1) { left: 10%; top: 12%; }
+/* POSICIONAMENTO DOS BOTÕES - WhatsApp ajustado */
+.hotspot:nth-child(1) { 
+    left: -2%;  /* 10% - 12% = -2% */ 
+    top: 16%;   /* 12% + 4% = 16% */
+}
 .hotspot:nth-child(2) { left: 40%; top: 12%; }
 .hotspot:nth-child(3) { left: 70%; top: 12%; }
 .hotspot:nth-child(4) { left: 10%; top: 56%; }
@@ -145,7 +148,7 @@ body {
         border-radius: 30px;
     }
     
-    .hotspot:nth-child(1) { left: 10%; top: 10%; }
+    .hotspot:nth-child(1) { left: -2%; top: 14%; }
     .hotspot:nth-child(2) { left: 40%; top: 10%; }
     .hotspot:nth-child(3) { left: 70%; top: 10%; }
     .hotspot:nth-child(4) { left: 10%; top: 58%; }
@@ -160,7 +163,7 @@ body {
         border-radius: 22px;
     }
     
-    .hotspot:nth-child(1) { left: 8%; top: 8%; }
+    .hotspot:nth-child(1) { left: -4%; top: 12%; }
     .hotspot:nth-child(2) { left: 40%; top: 8%; }
     .hotspot:nth-child(3) { left: 72%; top: 8%; }
     .hotspot:nth-child(4) { left: 8%; top: 60%; }

@@ -122,7 +122,7 @@ body {
 }
 
 /* ============================================ */
-/* POSICIONAMENTO DOS BOTÕES - FINAL */
+/* DESKTOP - Perfeito para notebook */
 /* ============================================ */
 
 /* LINHA DE CIMA - top: 17% */
@@ -130,7 +130,7 @@ body {
 .hotspot:nth-child(2) { left: 45%; top: 17%; }
 .hotspot:nth-child(3) { left: 72%; top: 17%; }
 
-/* LINHA DE BAIXO - top: 58% */
+/* LINHA DE BAIXO - top: 52% */
 .hotspot:nth-child(4) { left: 18%; top: 52%; }
 .hotspot:nth-child(5) { left: 45%; top: 52%; }
 .hotspot:nth-child(6) { left: 72%; top: 52%; }
@@ -140,7 +140,7 @@ body {
 }
 
 /* ============================================ */
-/* TABLET - 768px */
+/* TABLET - 768px (AJUSTADO) */
 /* ============================================ */
 @media (max-width: 768px) {
     .hotspot {
@@ -149,28 +149,30 @@ body {
         border-radius: 38px;
     }
     
-    .hotspot:nth-child(1) { left: 18%; top: 15%; }
-    .hotspot:nth-child(2) { left: 45%; top: 15%; }
-    .hotspot:nth-child(3) { left: 72%; top: 15%; }
-    .hotspot:nth-child(4) { left: 18%; top: 52%; }
-    .hotspot:nth-child(5) { left: 45%; top: 52%; }
-    .hotspot:nth-child(6) { left: 72%; top: 52%; }
+    /* Ajustes para tablet - baseado nos valores do desktop */
+    .hotspot:nth-child(1) { left: 15%; top: 14%; }
+    .hotspot:nth-child(2) { left: 43%; top: 14%; }
+    .hotspot:nth-child(3) { left: 72%; top: 14%; }
+    .hotspot:nth-child(4) { left: 15%; top: 54%; }
+    .hotspot:nth-child(5) { left: 43%; top: 54%; }
+    .hotspot:nth-child(6) { left: 72%; top: 54%; }
 }
 
 /* ============================================ */
-/* MOBILE - 480px */
+/* MOBILE - 480px (AJUSTADO) */
 /* ============================================ */
 @media (max-width: 480px) {
     .hotspot {
-        width: 57px;
-        height: 57px;
-        border-radius: 28.5px;
+        width: 65px;
+        height: 65px;
+        border-radius: 32.5px;
     }
     
-    .hotspot:nth-child(1) { left: 18%; top: 13%; }
-    .hotspot:nth-child(2) { left: 45%; top: 13%; }
-    .hotspot:nth-child(3) { left: 72%; top: 13%; }
-    .hotspot:nth-child(4) { left: 18%; top: 52%; }
-    .hotspot:nth-child(5) { left: 45%; top: 52%; }
-    .hotspot:nth-child(6) { left: 72%; top: 52%; }
+    /* Ajustes para mobile - valores diferentes do desktop */
+    .hotspot:nth-child(1) { left: 10%; top: 10%; }
+    .hotspot:nth-child(2) { left: 40%; top: 10%; }
+    .hotspot:nth-child(3) { left: 72%; top: 10%; }
+    .hotspot:nth-child(4) { left: 10%; top: 58%; }
+    .hotspot:nth-child(5) { left: 40%; top: 58%; }
+    .hotspot:nth-child(6) { left: 72%; top: 58%; }
 }

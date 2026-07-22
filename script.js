@@ -1,21 +1,15 @@
 document.querySelectorAll(".hotspot").forEach((button) => {
     button.addEventListener("click", function(e) {
-        // Feedback tátil (vibração)
         if (navigator.vibrate) {
             navigator.vibrate(15);
         }
         
-        // Efeito visual de clique
         this.classList.add("active");
         createRipple(e, this);
         
-        // Remove a classe active após animação
         setTimeout(() => {
             this.classList.remove("active");
         }, 200);
-        
-        // NÃO FAZEMOS preventDefault() aqui para não bloquear os links
-        // Deixamos o navegador lidar com o link normalmente
     });
     
     button.addEventListener("mouseleave", function() {
@@ -51,14 +45,12 @@ function createRipple(event, element) {
     }, 600);
 }
 
-// Pequeno ajuste para manter a página no topo em dispositivos móveis
 document.addEventListener('DOMContentLoaded', function() {
     if (window.innerWidth <= 768) {
         window.scrollTo(0, 0);
     }
 });
 
-// Previne zoom duplo
 document.addEventListener('dblclick', function(e) {
     e.preventDefault();
 }, { passive: false });

@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #eee;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    position: relative;
+    max-width: 1024px;
+    width: 100%;
+    margin: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.art {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hotspots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 45%;
+    z-index: 5;
+}
+
+.hotspot {
+    position: absolute;
+    width: 101px;
+    height: 101px;
+    border-radius: 50.5px;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.hotspot:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+.hotspot:active,
+.hotspot.active {
+    transform: scale(0.75) !important;
+    background: rgba(212, 175, 55, 0.4) !important;
+    box-shadow: 
+        0 0 50px rgba(212, 175, 55, 0.8), 
+        inset 0 0 30px rgba(212, 175, 55, 0.3),
+        0 0 100px rgba(212, 175, 55, 0.4) !important;
+    transition: all 0.06s ease !important;
+    border-radius: 50% !important;
+}
+
+.hotspot:active::after,
+.hotspot.active::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
+    animation: glow-pulse 0.3s ease-out;
+    pointer-events: none;
+}
+
+@keyframes glow-pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.hotspot .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.6);
+    transform: scale(0);
+    animation: ripple-animation 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    0% {
+        transform: scale(0);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* ============================================ */
+/* DESKTOP - Posicionamento dos botões */
+/* ============================================ */
+
+/* LINHA DE CIMA - top: 17% */
+.hotspot:nth-child(1) { left: 18%; top: 17%; }
+.hotspot:nth-child(2) { left: 45%; top: 17%; }
+.hotspot:nth-child(3) { left: 72%; top: 17%; }
+
+/* LINHA DE BAIXO - top: 52% */
+.hotspot:nth-child(4) { left: 18%; top: 52%; }
+.hotspot:nth-child(5) { left: 45%; top: 52%; }
+.hotspot:nth-child(6) { left: 72%; top: 52%; }
+
+.hotspot span {
+    display: none;
+}
+
+/* ============================================ */
+/* TABLET - 768px */
+/* ============================================ */
+@media (max-width: 768px) {
+    .hotspot {
+        width: 76px;
+        height: 76px;
+        border-radius: 38px;
+    }
+    
+    .hotspot:nth-child(1) { left: 18%; top: 15%; }
+    .hotspot:nth-child(2) { left: 45%; top: 15%; }
+    .hotspot:nth-child(3) { left: 72%; top: 15%; }
+    .hotspot:nth-child(4) { left: 18%; top: 52%; }
+    .hotspot:nth-child(5) { left: 45%; top: 52%; }
+    .hotspot:nth-child(6) { left: 72%; top: 52%; }
+}
+
+/* ============================================ */
+/* MOBILE - 480px */
+/* ============================================ */
+@media (max-width: 480px) {
+    .hotspot {
+        width: 57px;
+        height: 57px;
+        border-radius: 28.5px;
+    }
+    
+    .hotspot:nth-child(1) { left: 17%; top: 13%; }
+    .hotspot:nth-child(2) { left: 44%; top: 13%; }
+    .hotspot:nth-child(3) { left: 71%; top: 13%; }
+    .hotspot:nth-child(4) { left: 17%; top: 51%; }
+    .hotspot:nth-child(5) { left: 44%; top: 51%; }
+    .hotspot:nth-child(6) { left: 71%; top: 51%; }
+}

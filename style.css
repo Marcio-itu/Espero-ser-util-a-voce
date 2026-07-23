@@ -4,8 +4,8 @@
 
 .sublinhado-luz {
     position: absolute;
-    left: 20%;
-    bottom: 23%;
+    left: -30%;
+    bottom: 18%;
     width: 60%;
     height: 2px;
     z-index: 10;
@@ -17,8 +17,8 @@
     position: absolute;
     top: -4px;
     left: 0;
-    width: 8px;
-    height: 8px;
+    width: 5.6px;
+    height: 5.6px;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(212, 175, 55, 0.6) 50%, transparent 100%);
     border-radius: 50%;
     box-shadow: 0 0 12px rgba(212, 175, 55, 0.8), 0 0 25px rgba(212, 175, 55, 0.4);
@@ -44,25 +44,25 @@
 /* Ajustes para tablet */
 @media (max-width: 768px) {
     .sublinhado-luz {
-        bottom: 22%;
-        left: 18%;
+        bottom: 17%;
+        left: -30%;
         width: 64%;
     }
     .sublinhado-luz::after {
-        width: 6px;
-        height: 6px;
+        width: 4.2px;
+        height: 4.2px;
     }
 }
 
 /* Ajustes para mobile */
 @media (max-width: 480px) {
     .sublinhado-luz {
-        bottom: 20%;
-        left: 15%;
+        bottom: 15%;
+        left: -30%;
         width: 70%;
     }
     .sublinhado-luz::after {
-        width: 5px;
-        height: 5px;
+        width: 3.5px;
+        height: 3.5px;
     }
 }

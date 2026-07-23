@@ -177,3 +177,62 @@ body {
     .hotspot:nth-child(5) { left: 44%; top: 51%; }
     .hotspot:nth-child(6) { left: 71%; top: 51%; }
 }
+
+/* ============================================ */
+/* SUBLINHADO ILUMINADO - CORRETOR DE IMÓVEIS  */
+/* ============================================ */
+
+.sublinhado-luz {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 23%;
+    width: 35%;
+    height: 3px;
+    background: #c9a84c;
+    border-radius: 2px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.sublinhado-luz::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+    border-radius: 2px;
+    animation: luz-varrendo 2.5s ease-in-out infinite;
+}
+
+@keyframes luz-varrendo {
+    0% {
+        left: -30%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: -30%;
+    }
+}
+
+/* Ajuste para tablet */
+@media (max-width: 768px) {
+    .sublinhado-luz {
+        bottom: 22%;
+        width: 38%;
+        height: 2px;
+    }
+}
+
+/* Ajuste para mobile */
+@media (max-width: 480px) {
+    .sublinhado-luz {
+        bottom: 20%;
+        width: 45%;
+        height: 2px;
+    }
+}

@@ -54,3 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('dblclick', function(e) {
     e.preventDefault();
 }, { passive: false });
+
+document.addEventListener('dblclick', function(e) {
+    e.preventDefault();
+}, { passive: false });

@@ -1,68 +1,11 @@
-/* ============================================ */
-/* PONTO DE LUZ NO SUBLINHADO - APENAS O BRILHO */
-/* ============================================ */
-
-.sublinhado-luz {
-    position: absolute;
-    left: -30%;
-    bottom: 18%;
-    width: 60%;
-    height: 2px;
-    z-index: 10;
-    pointer-events: none;
-}
-
-.sublinhado-luz::after {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: 0;
-    width: 5.6px;
-    height: 5.6px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(212, 175, 55, 0.6) 50%, transparent 100%);
-    border-radius: 50%;
-    box-shadow: 0 0 12px rgba(212, 175, 55, 0.8), 0 0 25px rgba(212, 175, 55, 0.4);
-    animation: ponto-luz 3s ease-in-out infinite;
-}
-
-@keyframes ponto-luz {
-    0% {
-        left: 0%;
-        opacity: 0.6;
-    }
-    50% {
-        left: 100%;
-        opacity: 1;
-        box-shadow: 0 0 20px rgba(212, 175, 55, 0.9), 0 0 40px rgba(212, 175, 55, 0.5);
-    }
-    100% {
-        left: 0%;
-        opacity: 0.6;
-    }
-}
-
-/* Ajustes para tablet */
-@media (max-width: 768px) {
-    .sublinhado-luz {
-        bottom: 17%;
-        left: -30%;
-        width: 64%;
-    }
-    .sublinhado-luz::after {
-        width: 4.2px;
-        height: 4.2px;
-    }
-}
-
-/* Ajustes para mobile */
-@media (max-width: 480px) {
-    .sublinhado-luz {
-        bottom: 15%;
-        left: -30%;
-        width: 70%;
-    }
-    .sublinhado-luz::after {
-        width: 3.5px;
-        height: 3.5px;
-    }
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background-color: #1a1a1a; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+.container { position: relative; width: 100%; max-width: 480px; }
+.container img { width: 100%; display: block; }
+.hotspot { position: absolute; display: block; cursor: pointer; border: none; background: transparent; z-index: 10; }
+#btn-whatsapp  { top: 62%; left: 8%;  width: 25%; height: 12%; }
+#btn-ligar     { top: 62%; left: 38%; width: 25%; height: 12%; }
+#btn-simulador { top: 62%; left: 68%; width: 25%; height: 12%; }
+#btn-instagram { top: 78%; left: 8%;  width: 25%; height: 12%; }
+#btn-email     { top: 78%; left: 38%; width: 25%; height: 12%; }
+#btn-salvar    { top: 78%; left: 68%; width: 25%; height: 12%; }

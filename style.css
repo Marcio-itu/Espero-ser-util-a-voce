@@ -6,6 +6,8 @@ html, body {
     margin: 0;
     padding: 0;
     background: #eee;
+    height: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -13,12 +15,15 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    height: 100%;
 }
 
 .card {
     position: relative;
     max-width: 1024px;
     width: 100%;
+    max-height: 100vh;
+    height: 100%;
     margin: 20px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.1);
     border-radius: 16px;
@@ -28,8 +33,9 @@ body {
 
 .art {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+    object-fit: contain;
 }
 
 .hotspots {
@@ -146,6 +152,11 @@ body {
 /* TABLET - 768px */
 /* ============================================ */
 @media (max-width: 768px) {
+    .card {
+        margin: 10px;
+        border-radius: 12px;
+    }
+
     .hotspot {
         width: 76px;
         height: 76px;
@@ -164,6 +175,11 @@ body {
 /* MOBILE - 480px */
 /* ============================================ */
 @media (max-width: 480px) {
+    .card {
+        margin: 5px;
+        border-radius: 8px;
+    }
+
     .hotspot {
         width: 57px;
         height: 57px;
@@ -176,4 +192,44 @@ body {
     .hotspot:nth-child(4) { left: 17%; top: 51%; }
     .hotspot:nth-child(5) { left: 44%; top: 51%; }
     .hotspot:nth-child(6) { left: 71%; top: 51%; }
+}
+
+/* ============================================ */
+/* TELAS MUITO PEQUENAS - 360px */
+/* ============================================ */
+@media (max-width: 360px) {
+    .card {
+        margin: 3px;
+        border-radius: 6px;
+    }
+
+    .hotspot {
+        width: 42px;
+        height: 42px;
+        border-radius: 21px;
+    }
+    
+    .hotspot:nth-child(1) { left: 16%; top: 12%; }
+    .hotspot:nth-child(2) { left: 44%; top: 12%; }
+    .hotspot:nth-child(3) { left: 72%; top: 12%; }
+    .hotspot:nth-child(4) { left: 16%; top: 50%; }
+    .hotspot:nth-child(5) { left: 44%; top: 50%; }
+    .hotspot:nth-child(6) { left: 72%; top: 50%; }
+}
+
+/* ============================================ */
+/* TELAS MUITO GRANDES - acima de 1024px */
+/* ============================================ */
+@media (min-width: 1025px) {
+    .card {
+        max-height: 90vh;
+        height: auto;
+        max-width: 90vw;
+        margin: auto;
+    }
+
+    .art {
+        height: auto;
+        object-fit: cover;
+    }
 }

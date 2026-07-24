@@ -173,7 +173,7 @@ body {
     .hotspot:nth-child(1) { left: 17%; top: 13%; }
     .hotspot:nth-child(2) { left: 44%; top: 13%; }
     .hotspot:nth-child(3) { left: 71%; top: 13%; }
-    .hotspot:nth-child(4) { left: 17%; top: 51%; }
-    .hotspot:nth-child(5) { left: 44%; top: 51%; }
-    .hotspot:nth-child(6) { left: 71%; top: 51%; }
+    .hotspot:nth-child(4) { left: 17%; top: 48%; }
+    .hotspot:nth-child(5) { left: 44%; top: 48%; }
+    .hotspot:nth-child(6) { left: 71%; top: 48%; }
 }

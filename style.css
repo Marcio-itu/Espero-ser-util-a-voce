@@ -6,14 +6,6 @@ html, body {
     margin: 0;
     padding: 0;
     background: #eee;
-    height: 100%;
-}
-
-/* SÓ REMOVE A ROLAGEM EM DESKTOP */
-@media (min-width: 481px) {
-    html, body {
-        overflow: hidden;
-    }
 }
 
 body {
@@ -21,7 +13,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    height: 100%;
 }
 
 .card {
@@ -152,30 +143,9 @@ body {
 }
 
 /* ============================================ */
-/* DESKTOP - Ajuste para caber na tela sem rolagem */
-/* ============================================ */
-@media (min-width: 481px) {
-    .card {
-        height: 90vh;
-        max-height: 90vh;
-        margin: 20px;
-    }
-
-    .art {
-        height: 100%;
-        object-fit: contain;
-    }
-}
-
-/* ============================================ */
 /* TABLET - 768px */
 /* ============================================ */
-@media (max-width: 768px) and (min-width: 481px) {
-    .card {
-        margin: 10px;
-        border-radius: 12px;
-    }
-
+@media (max-width: 768px) {
     .hotspot {
         width: 76px;
         height: 76px;
@@ -191,21 +161,9 @@ body {
 }
 
 /* ============================================ */
-/* MOBILE - 480px - COMPORTAMENTO ORIGINAL */
+/* MOBILE - 480px */
 /* ============================================ */
 @media (max-width: 480px) {
-    .card {
-        height: auto;
-        max-height: none;
-        margin: 5px;
-        border-radius: 8px;
-    }
-
-    .art {
-        height: auto;
-        object-fit: none;
-    }
-
     .hotspot {
         width: 57px;
         height: 57px;
@@ -218,34 +176,4 @@ body {
     .hotspot:nth-child(4) { left: 17%; top: 51%; }
     .hotspot:nth-child(5) { left: 44%; top: 51%; }
     .hotspot:nth-child(6) { left: 71%; top: 51%; }
-}
-
-/* ============================================ */
-/* TELAS MUITO PEQUENAS - 360px */
-/* ============================================ */
-@media (max-width: 360px) {
-    .card {
-        height: auto;
-        max-height: none;
-        margin: 3px;
-        border-radius: 6px;
-    }
-
-    .art {
-        height: auto;
-        object-fit: none;
-    }
-
-    .hotspot {
-        width: 42px;
-        height: 42px;
-        border-radius: 21px;
-    }
-    
-    .hotspot:nth-child(1) { left: 16%; top: 12%; }
-    .hotspot:nth-child(2) { left: 44%; top: 12%; }
-    .hotspot:nth-child(3) { left: 72%; top: 12%; }
-    .hotspot:nth-child(4) { left: 16%; top: 50%; }
-    .hotspot:nth-child(5) { left: 44%; top: 50%; }
-    .hotspot:nth-child(6) { left: 72%; top: 50%; }
 }

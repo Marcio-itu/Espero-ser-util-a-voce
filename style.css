@@ -7,7 +7,13 @@ html, body {
     padding: 0;
     background: #eee;
     height: 100%;
-    overflow: hidden;
+}
+
+/* SÓ REMOVE A ROLAGEM EM DESKTOP */
+@media (min-width: 481px) {
+    html, body {
+        overflow: hidden;
+    }
 }
 
 body {
@@ -29,13 +35,10 @@ body {
     background: #fff;
 }
 
-/* A imagem mantém a proporção original e o card se ajusta a ela */
 .art {
     width: 100%;
     height: auto;
     display: block;
-    max-height: calc(100vh - 40px); /* Limita a altura para caber na tela com as margens */
-    object-fit: contain;
 }
 
 .hotspots {
@@ -149,9 +152,25 @@ body {
 }
 
 /* ============================================ */
+/* DESKTOP - Ajuste para caber na tela sem rolagem */
+/* ============================================ */
+@media (min-width: 481px) {
+    .card {
+        height: 90vh;
+        max-height: 90vh;
+        margin: 20px;
+    }
+
+    .art {
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+/* ============================================ */
 /* TABLET - 768px */
 /* ============================================ */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 481px) {
     .card {
         margin: 10px;
         border-radius: 12px;
@@ -172,12 +191,19 @@ body {
 }
 
 /* ============================================ */
-/* MOBILE - 480px */
+/* MOBILE - 480px - COMPORTAMENTO ORIGINAL */
 /* ============================================ */
 @media (max-width: 480px) {
     .card {
+        height: auto;
+        max-height: none;
         margin: 5px;
         border-radius: 8px;
+    }
+
+    .art {
+        height: auto;
+        object-fit: none;
     }
 
     .hotspot {
@@ -199,8 +225,15 @@ body {
 /* ============================================ */
 @media (max-width: 360px) {
     .card {
+        height: auto;
+        max-height: none;
         margin: 3px;
         border-radius: 6px;
+    }
+
+    .art {
+        height: auto;
+        object-fit: none;
     }
 
     .hotspot {

@@ -170,10 +170,10 @@ body {
         border-radius: 28.5px;
     }
     
-    .hotspot:nth-child(1) { left: 14%; top: 13%; }
-    .hotspot:nth-child(2) { left: 41%; top: 13%; }
-    .hotspot:nth-child(3) { left: 68%; top: 13%; }
-    .hotspot:nth-child(4) { left: 14%; top: 48%; }
-    .hotspot:nth-child(5) { left: 41%; top: 48%; }
-    .hotspot:nth-child(6) { left: 68%; top: 48%; }
+    .hotspot:nth-child(1) { left: 15%; top: 13%; }
+    .hotspot:nth-child(2) { left: 42%; top: 13%; }
+    .hotspot:nth-child(3) { left: 69%; top: 13%; }
+    .hotspot:nth-child(4) { left: 15%; top: 48%; }
+    .hotspot:nth-child(5) { left: 42%; top: 48%; }
+    .hotspot:nth-child(6) { left: 69%; top: 48%; }
 }

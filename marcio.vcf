@@ -1,5 +1,13 @@
 BEGIN:VCARD
 VERSION:3.0
-FN:Marcio Santos | Imóveis Itu/SP
-NOTE:Inteligencia Imobiliaria Construindo Confiança
+N:Santos;Marcio;;;
+FN:Marcio Santos | Corretor Imóveis
+ORG:Márcio Santos | Imóveis em Itu/SP
+item1.TEL:+5511967602254
+item1.X-ABLabel:Meu telefone
+item2.TEL:+551132806090
+item2.X-ABLabel:WhatsApp - só mensagem
+EMAIL;TYPE=INTERNET:Corretor_Marcio@proton.me
+URL:https://www.instagram.com/corretor_marcio_itu
+NOTE:Inteligência Imobiliária. Construindo Confiança.
 END:VCARD

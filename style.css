@@ -66,7 +66,16 @@ body {
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    background: radial-gradient(circle 2.5px at 50% 3px, rgba(212, 175, 55, 0.95) 0%, rgba(212, 175, 55, 0.95) 60%, transparent 75%);
+    background: conic-gradient(from 0deg,
+        rgba(212, 175, 55, 0) 0deg,
+        rgba(212, 175, 55, 0) 300deg,
+        rgba(212, 175, 55, 0.10) 322deg,
+        rgba(212, 175, 55, 0.28) 340deg,
+        rgba(212, 175, 55, 0.45) 355deg,
+        rgba(212, 175, 55, 0.5) 360deg
+    );
+    -webkit-mask: radial-gradient(circle, transparent 91%, #000 92%, #000 96%, transparent 97%);
+    mask: radial-gradient(circle, transparent 91%, #000 92%, #000 96%, transparent 97%);
     animation: orbit-light 3s linear infinite;
     pointer-events: none;
     z-index: 1;

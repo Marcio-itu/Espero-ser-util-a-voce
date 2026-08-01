@@ -61,6 +61,22 @@ body {
     -webkit-user-select: none;
 }
 
+.hotspot::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle 2.5px at 50% 3px, rgba(212, 175, 55, 0.95) 0%, rgba(212, 175, 55, 0.95) 60%, transparent 75%);
+    animation: orbit-light 3s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes orbit-light {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 .hotspot:hover {
     background: rgba(255, 255, 255, 0.15);
     transform: scale(1.05);
@@ -137,6 +153,14 @@ body {
 .hotspot:nth-child(4) { left: 18%; top: 52%; }
 .hotspot:nth-child(5) { left: 45%; top: 52%; }
 .hotspot:nth-child(6) { left: 72%; top: 52%; }
+
+/* Defasagem do ponto de luz para não girar tudo em sincronia */
+.hotspot:nth-child(1)::before { animation-delay: 0s; }
+.hotspot:nth-child(2)::before { animation-delay: -0.5s; }
+.hotspot:nth-child(3)::before { animation-delay: -1s; }
+.hotspot:nth-child(4)::before { animation-delay: -1.5s; }
+.hotspot:nth-child(5)::before { animation-delay: -2s; }
+.hotspot:nth-child(6)::before { animation-delay: -2.5s; }
 
 .hotspot span {
     display: none;

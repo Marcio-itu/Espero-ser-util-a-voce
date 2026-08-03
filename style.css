@@ -68,14 +68,14 @@ body {
     border-radius: 50%;
     background: conic-gradient(from 0deg,
         rgba(212, 175, 55, 0) 0deg,
-        rgba(212, 175, 55, 0) 300deg,
-        rgba(212, 175, 55, 0.10) 322deg,
-        rgba(212, 175, 55, 0.28) 340deg,
-        rgba(212, 175, 55, 0.45) 355deg,
-        rgba(212, 175, 55, 0.5) 360deg
+        rgba(212, 175, 55, 0) 290deg,
+        rgba(212, 175, 55, 0.25) 320deg,
+        rgba(212, 175, 55, 0.55) 340deg,
+        rgba(212, 175, 55, 0.85) 355deg,
+        rgba(212, 175, 55, 0.95) 360deg
     );
-    -webkit-mask: radial-gradient(circle, transparent 91%, #000 92%, #000 96%, transparent 97%);
-    mask: radial-gradient(circle, transparent 91%, #000 92%, #000 96%, transparent 97%);
+    -webkit-mask: radial-gradient(circle, transparent 89%, #000 90%, #000 97%, transparent 98%);
+    mask: radial-gradient(circle, transparent 89%, #000 90%, #000 97%, transparent 98%);
     animation: orbit-light 3s linear infinite;
     pointer-events: none;
     z-index: 1;
